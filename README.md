@@ -1,2 +1,2 @@
 # EZSun
-The mobile applications make hunting coupons easier
+The mobile app make hunting coupons easier
