@@ -1,5 +1,12 @@
 import * as React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Dimension,
+  Dimensions,
+} from "react-native";
 import * as Progress from "react-native-progress";
 
 export default function Card() {
@@ -75,16 +82,17 @@ export default function Card() {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    marginVertical: 10,
+    margin: 10,
     paddingHorizontal: "auto",
+    height: Dimensions.get("window").height * 0.2,
   },
   itemContainer: {
-    height: 200,
     width: "50%",
     justifyContent: "center",
     alignSelf: "center",
     borderRadius: 8,
     padding: 5,
+    height: "90%",
     // borderColor: "#ddd",
     // borderWidth: 1,
   },
@@ -94,7 +102,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     fontWeight: "bold",
     paddingLeft: "10%",
-    fontSize: 20,
+    fontSize: 10,
   },
   progressBar: {},
   itemImage: {

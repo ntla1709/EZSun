@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import { ScrollView, StyleSheet, Text, View, Image } from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Dimensions,
+} from "react-native";
 import { Button, Header, SearchBar } from "react-native-elements";
 import { Icon } from "react-native-elements";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 import Head from "../shared/head";
-import Banner from "../components/banner";
 import Swiper from "react-native-swiper";
 import Card from "../components/card";
 
@@ -14,7 +20,7 @@ export default function Hot() {
   return (
     <View>
       <Head />
-      <ScrollView>
+      <ScrollView contentContainerStyle={{ flex: 1 }}>
         <View style={styles.sliderContainer}>
           <Swiper autoplay height={"100%"} activeDotColor="#F52870">
             <View style={styles.slide}>
@@ -41,7 +47,10 @@ export default function Hot() {
           </Swiper>
         </View>
         <Title />
-
+        <Card />
+        <Card />
+        <Card />
+        <Card />
         <Card />
       </ScrollView>
     </View>
@@ -49,11 +58,8 @@ export default function Hot() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   sliderContainer: {
-    height: "20%",
+    height: Dimensions.get("window").height * 0.2,
     width: "95%",
     marginTop: 10,
     justifyContent: "center",
