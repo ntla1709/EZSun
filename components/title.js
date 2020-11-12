@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
     height: 30,
     marginTop: 8,
     marginLeft: 5,
-    //padding: 5,
     borderRadius: 10,
     backgroundColor: "#DB7093",
     justifyContent: "center",
@@ -32,7 +31,6 @@ const styles = StyleSheet.create({
   textTitle: {
     fontWeight: "bold",
     color: "#fff",
-    //textAlign: "center",
     marginHorizontal: 8,
   },
   iconTitle: {

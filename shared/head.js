@@ -23,16 +23,18 @@ export default function Head() {
           searchIcon={{ size: 25 }}
           onChangeText={updateSearch}
           value={search}
-          lightTheme="true"
+          // lightTheme="true"
+
           inputContainerStyle={{
             width: "100%",
-            height: "100%",
+            height: "95%",
             backgroundColor: "#fff",
           }}
           containerStyle={{
             backgroundColor: "tranparent",
             borderBottomWidth: 0,
             borderTopWidth: 0,
+            justifyContent: "center",
           }}
         />
       }

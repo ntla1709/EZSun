@@ -54,7 +54,7 @@ export default function App() {
           activeTintColor: "#444",
           inactiveTintColor: "grey",
           activeBackgroundColor: "#DB7093",
-          tabStyle: { borderRadius: 10 },
+          tabStyle: { borderRadius: 5 },
           //style: { backgroundColor: "#F52870" },
         }}
       >

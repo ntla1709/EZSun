@@ -20,39 +20,41 @@ export default function Hot() {
   return (
     <View>
       <Head />
-      <ScrollView contentContainerStyle={{ flex: 1 }}>
-        <View style={styles.sliderContainer}>
-          <Swiper autoplay height={"100%"} activeDotColor="#F52870">
-            <View style={styles.slide}>
-              <Image
-                source={require("../assets/banner-shopee.jpg")}
-                resizeMode="cover"
-                style={styles.sliderImage}
-              />
-            </View>
-            <View style={styles.slide}>
-              <Image
-                source={require("../assets/banner-lazada.jpg")}
-                resizeMode="cover"
-                style={styles.sliderImage}
-              />
-            </View>
-            <View style={styles.slide}>
-              <Image
-                source={require("../assets/banner-tiki.png")}
-                resizeMode="cover"
-                style={styles.sliderImage}
-              />
-            </View>
-          </Swiper>
-        </View>
-        <Title />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </ScrollView>
+      <View style={{ paddingBottom: 160 }}>
+        <ScrollView>
+          <View style={styles.sliderContainer}>
+            <Swiper autoplay height={"100%"} activeDotColor="#F52870">
+              <View style={styles.slide}>
+                <Image
+                  source={require("../assets/banner-shopee.jpg")}
+                  resizeMode="cover"
+                  style={styles.sliderImage}
+                />
+              </View>
+              <View style={styles.slide}>
+                <Image
+                  source={require("../assets/banner-lazada.jpg")}
+                  resizeMode="cover"
+                  style={styles.sliderImage}
+                />
+              </View>
+              <View style={styles.slide}>
+                <Image
+                  source={require("../assets/banner-tiki.png")}
+                  resizeMode="cover"
+                  style={styles.sliderImage}
+                />
+              </View>
+            </Swiper>
+          </View>
+          <Title />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </ScrollView>
+      </View>
     </View>
   );
 }

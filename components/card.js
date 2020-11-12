@@ -3,11 +3,11 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
-  Dimension,
+  ImageBackground,
   Dimensions,
 } from "react-native";
 import * as Progress from "react-native-progress";
+import Label from "./label";
 
 export default function Card() {
   const sum = 20;
@@ -15,65 +15,59 @@ export default function Card() {
   return (
     <View style={styles.container}>
       <View style={styles.itemContainer}>
-        <Image
+        <ImageBackground
           source={require("../assets/item1.png")}
           resizeMode="contain"
           style={styles.itemImage}
-        />
-        <Text style={styles.price}>429.000đ</Text>
-        <Progress.Bar
-          height={15}
-          borderRadius={10}
-          borderWidth={1}
-          color="#DB7093"
-          borderColor="#DB7093"
-          progress={sell / sum}
-          width={null}
         >
-          <Text
-            style={{
-              alignSelf: "center",
-              color: "#444",
-              position: "absolute",
-              top: 0.5,
-              fontSize: 10,
-              fontWeight: "bold",
-            }}
+          <Label style={{ position: "absolute", top: 20, left: 30 }} />
+        </ImageBackground>
+        <Text style={styles.title}>
+          Serum siêu cấp ẩm sáng da L'Oreal Paris pure Hyaluronic Acid 1.5% 30ml
+        </Text>
+        <Text style={styles.price}>đ 429.000</Text>
+        <View style={styles.progressBar}>
+          <Progress.Bar
+            height={15}
+            borderRadius={10}
+            borderWidth={1}
+            color="#DB7093"
+            borderColor="#DB7093"
+            progress={sell / sum}
+            width={Dimensions.get("window").width * 0.4}
           >
-            Đã bán {sell}
-          </Text>
-        </Progress.Bar>
+            <Text style={styles.textProgressBar}>Đã bán {sell}</Text>
+          </Progress.Bar>
+        </View>
       </View>
 
       <View style={styles.itemContainer}>
-        <Image
+        <View style={styles.labelView}></View>
+        <ImageBackground
           source={require("../assets/item2.png")}
           resizeMode="contain"
           style={styles.itemImage}
-        />
-        <Text style={styles.price}>320.000đ</Text>
-        <Progress.Bar
-          height={15}
-          borderRadius={10}
-          borderWidth={1}
-          color="#DB7093"
-          borderColor="#DB7093"
-          progress={sell / sum}
-          width={null}
         >
-          <Text
-            style={{
-              alignSelf: "center",
-              color: "#444",
-              position: "absolute",
-              top: 0.5,
-              fontSize: 10,
-              fontWeight: "bold",
-            }}
+          <Label style={{ position: "absolute" }} />
+        </ImageBackground>
+        <Text style={styles.title}>
+          Bộ sản phẩm chăm sóc dưỡng ẩm da innisfree Hydration Skin Care Set
+          with Green Tea
+        </Text>
+        <Text style={styles.price}>đ 379.000</Text>
+        <View style={styles.progressBar}>
+          <Progress.Bar
+            height={15}
+            borderRadius={10}
+            borderWidth={1}
+            color="#DB7093"
+            borderColor="#DB7093"
+            progress={sell / sum}
+            width={Dimensions.get("window").width * 0.4}
           >
-            Đã bán {sell}
-          </Text>
-        </Progress.Bar>
+            <Text style={styles.textProgressBar}>Đã bán {sell}</Text>
+          </Progress.Bar>
+        </View>
       </View>
     </View>
   );
@@ -84,30 +78,45 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     margin: 10,
     paddingHorizontal: "auto",
-    height: Dimensions.get("window").height * 0.2,
+    height: Dimensions.get("window").height * 0.35,
   },
   itemContainer: {
     width: "50%",
+    height: "80%",
     justifyContent: "center",
     alignSelf: "center",
     borderRadius: 8,
     padding: 5,
-    height: "90%",
-    // borderColor: "#ddd",
-    // borderWidth: 1,
+  },
+
+  itemImage: {
+    height: "100%",
+    width: "100%",
+    alignSelf: "center",
+    borderRadius: 5,
+    position: "relative",
+  },
+  title: {
+    marginTop: 5,
+    fontSize: 10,
+    height: 24,
+    overflow: "visible",
   },
   price: {
-    // textAlign: "center",
-    alignItems: "center",
+    //textAlign: "center",
     marginVertical: 5,
     fontWeight: "bold",
-    paddingLeft: "10%",
     fontSize: 10,
   },
-  progressBar: {},
-  itemImage: {
-    height: "80%",
+  progressBar: {
+    alignItems: "center",
+  },
+  textProgressBar: {
     alignSelf: "center",
-    borderRadius: 15,
+    color: "#444",
+    position: "absolute",
+    top: 0.5,
+    fontSize: 10,
+    fontWeight: "bold",
   },
 });
