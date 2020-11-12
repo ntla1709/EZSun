@@ -20,9 +20,11 @@ export default function Card() {
           resizeMode="contain"
           style={styles.itemImage}
         >
-          <Label style={{ position: "absolute", top: 20, left: 30 }} />
+          <View style={{ position: "absolute", top: 3 }}>
+            <Label />
+          </View>
         </ImageBackground>
-        <Text style={styles.title}>
+        <Text style={styles.title} numberOfLines={2} ellipsizeMode="tail">
           Serum siêu cấp ẩm sáng da L'Oreal Paris pure Hyaluronic Acid 1.5% 30ml
         </Text>
         <Text style={styles.price}>đ 429.000</Text>
@@ -48,9 +50,11 @@ export default function Card() {
           resizeMode="contain"
           style={styles.itemImage}
         >
-          <Label style={{ position: "absolute" }} />
+          <View style={{ position: "absolute", top: 3 }}>
+            <Label />
+          </View>
         </ImageBackground>
-        <Text style={styles.title}>
+        <Text style={styles.title} numberOfLines={2} ellipsizeMode="tail">
           Bộ sản phẩm chăm sóc dưỡng ẩm da innisfree Hydration Skin Care Set
           with Green Tea
         </Text>
@@ -93,7 +97,7 @@ const styles = StyleSheet.create({
     height: "100%",
     width: "100%",
     alignSelf: "center",
-    borderRadius: 5,
+    borderRadius: 9,
     position: "relative",
   },
   title: {

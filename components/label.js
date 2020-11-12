@@ -25,7 +25,7 @@ export default function Label() {
 
 const styles = StyleSheet.create({
   shopeeLabel: {
-    width: 60,
+    width: 50,
     height: 25,
     borderRadius: 8,
     backgroundColor: "#f53d2d",
